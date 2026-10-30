@@ -12,13 +12,21 @@
 
 O sistema auxiliará na identificação de gargalos de desempenho e esgotamento de recursos físicos (processamento, memória e disco) em servidores Linux.
 Seu público-alvo será composto por administradores de infraestrutura, desenvolvedores que mantêm serviços próprios (self-hosting) e operadores de pequenos ambientes em nuvem.
+
 A entrada será um arquivo estruturado (CSV ou JSON) com registros temporais de telemetria do servidor, contendo leituras como:
+
 2026-10-27T14:10:00;host=srv-app01;cpu_pct=42.5;load_1m=4.80;mem_used_pct=94.2;swap_in_kb=1840;iowait_pct=31.4
+
 A saída reunirá os períodos críticos diagnosticados e a relação entre os recursos afetados, conforme o exemplo:
+
 Servidor analisado: srv-app01 (4 vCPUs, 8 GB RAM)
+
 Período crítico: 27/10, das 14:08 às 14:15
+
 Ocorrências: 8 leituras consecutivas com uso de memória acima de 90% e escrita ativa em Swap
+
 Diagnóstico: Saturação de memória RAM com paginação em disco (Swap thrashing), elevando o tempo de espera de I/O (iowait médio de 29,8%).
+
 Severidade: 9/10, conforme os limiares de saturação configurados para o perfil do servidor.
 
 ## 3. Pesquisa e justificativa da relevância
