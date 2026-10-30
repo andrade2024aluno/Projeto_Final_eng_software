@@ -27,7 +27,6 @@ Ocorrências: 8 leituras consecutivas com uso de memória acima de 90% e escrita
 
 Diagnóstico: Saturação de memória RAM com paginação em disco (Swap thrashing), elevando o tempo de espera de I/O (iowait médio de 29,8%).
 
-Severidade: 9/10, conforme os limiares de saturação configurados para o perfil do servidor.
 
 ## 3. Pesquisa e justificativa da relevância
 
