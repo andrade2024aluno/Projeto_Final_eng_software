@@ -23,13 +23,13 @@ Severidade: 9/10, conforme os limiares de saturação configurados para o perfil
 
 ## 3. Pesquisa e justificativa da relevância
 
-A pesquisa utilizou duas fontes: a documentação do Método USE, de Brendan Gregg, e o capítulo sobre monitorização do livro Site Reliability Engineering (SRE), da Google. Uma fundamenta como detetar gargalos de hardware, enquanto a outra justifica a análise estruturada de métricas para encontrar a causa de lentidões.
+A pesquisa usou duas fontes: o Método USE, de Brendan Gregg [1], e o capítulo sobre monitoramento do livro *Site Reliability Engineering* (SRE), do Google [2].
 
-Brendan Gregg propõe avaliar três indicadores em cada recurso físico: Utilização, Saturação e Erros (USE). O autor destaca que olhar apenas a média de uso (como a percentagem de CPU ou RAM) esconde sinais de saturação — quando o recurso começa a acumular trabalho em fila, como processos a aguardar por leitura de disco (I/O wait) ou trocas constantes entre RAM e Swap. Esses fenómenos travam os serviços mesmo quando o processador parece livre.
+Gregg propõe avaliar Utilização, Saturação e Erros em cada recurso físico. Olhar só a média de uso (CPU ou RAM) esconde a saturação, que ocorre quando o recurso acumula trabalho em fila, como I/O wait ou trocas constantes entre RAM e Swap. Isso trava serviços mesmo com o processador aparentemente livre.
 
-O livro de SRE da Google aponta que a análise manual de grandes volumes de telemetria é ineficiente e que a monitorização deve separar sintomas de causas reais, diferenciando picos isolados de uma degradação contínua. Embora o livro trate de infraestruturas de grande escala, a dificuldade de cruzar várias colunas de métricas ao longo do tempo também afeta quem gere servidores menores sem ferramentas pagas.
+O livro de SRE aponta que analisar telemetria manualmente é ineficiente e que o monitoramento deve separar sintomas de causas e picos isolados de degradações contínuas. Embora trate de grande escala, o problema de cruzar várias métricas ao longo do tempo também afeta quem administra servidores menores sem ferramentas pagas.
 
-Com base nisto, o NodeDiag propõe filtrar os registos de coleta e cruzar métricas de utilização e saturação para destacar o que exige atenção, reduzindo o trabalho de inspecionar tabelas brutas manualmente. Esse ganho é uma hipótese da proposta, ainda não medida. Picos rápidos serão tratados como variações normais de carga e apenas eventos contínuos gerarão alertas, cabendo ao administrador decidir a correção a aplicar.
+Com base nisso, o NodeDiag cruza métricas de utilização e saturação para destacar o que exige atenção, reduzindo a inspeção manual de tabelas. Esse ganho é uma hipótese ainda não medida. Picos rápidos serão tratados como variação normal e só eventos contínuos gerarão alertas, cabendo ao administrador decidir a correção.
 
 ## 4. Referências
 
