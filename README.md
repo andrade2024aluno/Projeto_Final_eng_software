@@ -1,6 +1,6 @@
 # Sprint 1 — Definição da proposta
 
-**Projeto:** NodeDiag — Diagnóstico de saúde e identificação de gargalos em servidores
+**Projeto:** Diagnóstico de saúde e identificação de gargalos em servidores
 
 ## 1. Integrantes
 
@@ -30,16 +30,12 @@ Diagnóstico: Saturação de memória RAM com paginação em disco (Swap thrashi
 
 ## 3. Pesquisa e justificativa da relevância
 
-A pesquisa usou duas fontes: o Método USE, de Brendan Gregg [1], e o capítulo sobre monitoramento do livro *Site Reliability Engineering* (SRE), do Google [2].
+A pesquisa usou fonte: o Método USE, de Brendan Gregg 
 
 Gregg propõe avaliar Utilização, Saturação e Erros em cada recurso físico. Olhar só a média de uso (CPU ou RAM) esconde a saturação, que ocorre quando o recurso acumula trabalho em fila, como I/O wait ou trocas constantes entre RAM e Swap. Isso trava serviços mesmo com o processador aparentemente livre.
 
-O livro de SRE aponta que analisar telemetria manualmente é ineficiente e que o monitoramento deve separar sintomas de causas e picos isolados de degradações contínuas. Embora trate de grande escala, o problema de cruzar várias métricas ao longo do tempo também afeta quem administra servidores menores sem ferramentas pagas.
-
-Com base nisso, o NodeDiag cruza métricas de utilização e saturação para destacar o que exige atenção, reduzindo a inspeção manual de tabelas. Esse ganho é uma hipótese ainda não medida. Picos rápidos serão tratados como variação normal e só eventos contínuos gerarão alertas, cabendo ao administrador decidir a correção.
+Com base nisso, o projeto cruza métricas de utilização e saturação para destacar o que exige atenção, reduzindo a inspeção manual de tabelas. Esse ganho é uma hipótese ainda não medida. Picos rápidos serão tratados como variação normal e só eventos contínuos gerarão alertas, cabendo ao administrador decidir a correção.
 
 ## 4. Referências
 
-[1] GREGG, Brendan. **The USE Method**. Brendan Gregg's Homepage, [s.d.]. Disponível em: <https://www.brendangregg.com/usemethod.html>. Acesso em: 29 out. 2026. Seções consultadas: *Introduction*, *Summary*, *Resource List* e *Interpretation*.
-
-[2] EWASCHUK, Rob. **Monitoring Distributed Systems**. In: BEYER, Betsey et al. (org.). *Site Reliability Engineering: How Google Runs Production Systems*. Sebastopol: O'Reilly Media, 2016. Cap. 6. Disponível em: <https://sre.google/sre-book/monitoring-distributed-systems/>. Acesso em: 29 out. 2026. Seções consultadas: *Definitions*, *Why Monitor?* e *Symptoms Versus Causes*.
+GREGG, Brendan. **The USE Method**. Brendan Gregg's Homepage, [s.d.]. Disponível em: <https://www.brendangregg.com/usemethod.html>. Acesso em: 29 out. 2026. Seções consultadas: *Introduction*, *Summary*, *Resource List* e *Interpretation*.
