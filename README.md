@@ -1,4 +1,4 @@
-# Sprint 1 — Definição da proposta
+# Sprint 1
 
 **Projeto:** Diagnóstico de saúde e identificação de gargalos em servidores
 
