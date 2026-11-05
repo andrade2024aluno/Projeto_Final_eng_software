@@ -1,8 +1,5 @@
-"""Testes da Sprint 2.
-
-Cada teste se chama test_h<história>_c<critério>: por exemplo, test_h2_c3 verifica
-o 3º critério da História 2. Nesta sprint todos falham, pois as funções ainda
-não foram implementadas (Sprint 3).
+"""
+Testes da Sprint 2.
 
 Execução: python -m unittest test_sprint2 -v
 """
