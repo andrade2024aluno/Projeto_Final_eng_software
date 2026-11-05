@@ -52,6 +52,6 @@ Os critérios de cada história são numerados na ordem em que aparecem (1º, 2�
 
 | História | Testes |
 |----------|--------|
-| 1 | test_h1_c1 a test_h1_c5 |
+| 1 | test_h1_c1 a test_h1_c4 |
 | 2 | test_h2_c1 a test_h2_c4 |
 | 3 | test_h3_c1 a test_h3_c4 |
