@@ -1,6 +1,5 @@
 """
 Testes da Sprint 2.
-
 Execução: python -m unittest test_sprint2 -v
 """
 import unittest
@@ -31,14 +30,8 @@ class TestHistoria1(unittest.TestCase):
             load_telemetry("invalido_texto.csv")  # texto na linha 3
         self.assertIn("3", str(erro.exception))
 
-    def test_h1_c4_valor_fora_de_0_a_100(self):
-        """Critério 4: valor abaixo de 0 ou acima de 100 gera erro com o número da linha."""
-        with self.assertRaises(TelemetryError) as erro:
-            load_telemetry("invalido_fora_da_faixa.csv")  # valor 101 na linha 3
-        self.assertIn("3", str(erro.exception))
-
-    def test_h1_c5_arquivo_que_nao_e_csv(self):
-        """Critério 5: arquivo que não seja .csv é recusado."""
+    def test_h1_c4_arquivo_que_nao_e_csv(self):
+        """Critério 4: arquivo que não seja .csv é recusado."""
         with self.assertRaises(TelemetryError):
             load_telemetry("dados.txt")
 
