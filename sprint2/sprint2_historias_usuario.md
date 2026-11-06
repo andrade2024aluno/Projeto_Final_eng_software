@@ -24,8 +24,8 @@ Como administrador de sistemas, eu quero ver a média e o pico de uso de CPU, me
 Critérios de aceitação:
 
 * Para cada servidor, o resultado traz os 4 recursos, e cada um mostra a média e o pico.
-* A média é calculada sobre todos os valores do servidor (ex.: 50, 70 e 90 dão 70).
-* O pico é o maior valor do servidor (ex.: 20, 95 e 40 dão 95).
+* A média é calculada sobre todos os valores do servidor.
+* O pico é o maior valor do servidor.
 * Quando o arquivo tem mais de um servidor, cada um é calculado separadamente.
 
 Prioridade: Média
