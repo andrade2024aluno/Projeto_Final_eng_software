@@ -6,7 +6,7 @@
 
 1. Lucas Gabriel Rodrigues de Moraes
 2. Vinicius Gonçalves de Andrade
-3.
+
 
 ## 2. Descrição do sistema
 
