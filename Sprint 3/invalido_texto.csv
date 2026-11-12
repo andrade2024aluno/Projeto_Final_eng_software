@@ -1,0 +1,4 @@
+machine_id,cpu_util_percent,mem_util_percent,disk_io_percent,net_in
+m_1,21.5,33.1,22.6,22.8
+m_2,abc,90.8,37.5,26.2
+m_3,23.4,45.8,24.8,32.2
