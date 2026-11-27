@@ -33,9 +33,9 @@ def validar_colunas(colunas):
         )
 
 
-# ==========================================
-# 1. PADRÃO STRATEGY (Estratégia de Leitura)
-# ==========================================
+
+# 1. PADRÃO STRATEGY
+
 class LeitorCSV:
 
     def ler(self, caminho):
@@ -69,9 +69,9 @@ class LeitorJSON:
         return linhas_brutas
 
 
-# ==========================================
-# 2. PADRÃO FACTORY METHOD (Fábrica de Leitores)
-# ==========================================
+
+# 2. PADRÃO FACTORY METHOD 
+
 class FabricaLeitor:
 
     @staticmethod
@@ -174,9 +174,9 @@ def mostrar_relatorio(estatisticas, limite=80.0):
         print()
 
 
-# ==========================================
-# 3. PADRÃO FACADE (Fachada do Sistema)
-# ==========================================
+
+# 3. PADRÃO FACADE 
+
 class DiagnosticoFacade:
 
     def __init__(self, arquivo, limite=80.0):
